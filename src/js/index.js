@@ -1,8 +1,4 @@
 import { data } from "./data.js";
-import {
-  createCard,
-  appendCardToContainer,
-  processEmojiData,
-} from "./function.js";
+import { processEmojiData } from "./processEmojiData.js";
 
 processEmojiData(data);

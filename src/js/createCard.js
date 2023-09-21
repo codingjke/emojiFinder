@@ -17,18 +17,3 @@ export function createCard(emoji) {
 
   return block;
 }
-
-export function appendCardToContainer(card, container) {
-  container.appendChild(card);
-}
-
-export function processEmojiData(data) {
-  const blocksContainer = document.querySelector(".blocks-container");
-
-  data.forEach((emoji) => {
-    const card = createCard(emoji);
-    appendCardToContainer(card, blocksContainer);
-  });
-}
-
-
