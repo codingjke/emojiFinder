@@ -5,6 +5,7 @@
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
+  margin-top: 47px;
 }
 
 .blocks-row__block {
@@ -13,4 +14,28 @@
   border-radius: 4px;
   border: 1px solid var(--stroke-light, #dee2e6);
   background: #fff;
+  margin-top: 22px;
+}
+.block-title {
+  color: #000;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 700;
+  padding-top: 18px;
+}
+
+.block-symbol {
+  color: var(--body-text-base-color, #68717a);
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.block-keywords {
+  color: #3f444a;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
 }
