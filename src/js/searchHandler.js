@@ -10,9 +10,23 @@ export function initializeSearch() {
 
     blocksContainer.innerHTML = "";
 
-    const filteredData = data.filter((emoji) =>
-      emoji.title.toLowerCase().startsWith(searchText)
-    );
+    let filteredData = data;
+
+    if (searchText.trim() !== "") {
+      filteredData = data
+        .filter(
+          (emoji) =>
+            emoji.title.toLowerCase().startsWith(searchText) ||
+            emoji.keywords.toLowerCase().includes(searchText)
+        )
+        .sort((a, b) => a.title.localeCompare(b.title)); 
+    }
+
+    filteredData.forEach((emoji) => {
+      const keywordsArray = emoji.keywords.split(" ");
+      const uniqueKeywordsArray = [...new Set(keywordsArray)];
+      emoji.keywords = uniqueKeywordsArray.join(" ");
+    });
 
     processEmojiData(filteredData);
   });
